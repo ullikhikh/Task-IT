@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:ChessApp.ViewModels"
+        x:Class="ChessApp.Views.MainWindow"
+        Width="600" Height="600" Background="Gray">
+
+    <Window.DataContext>
+        <vm:MainWindowViewModel />
+    </Window.DataContext>
+
+    <Grid RowDefinitions="*,Auto" Margin="20">
+        <UniformGrid x:Name="BoardGrid" 
+                     Grid.Row="0"
+                     Rows="8"
+                     Columns="8"
+                     Margin="10"/>
+    
+        <TextBlock x:Name="StatusText"
+                   Grid.Row="1"
+                   FontSize="16"
+                   Foreground="Red"
+                   Margin="0,20,0,0" />
+    </Grid>
+
+</Window>
